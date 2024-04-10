@@ -1,0 +1,171 @@
+body{ 
+    background-image: url('../../assets/authenticationBackground.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+       background-position: center;
+       margin-right: 15%;
+ }
+
+.signWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.form{
+    width: 420px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px 40px;
+    color: black;
+}
+
+.signWrapper .signSpace {
+    bottom: 3px;
+    font-size: 30px;
+    text-align: center;
+    color: #1A7893;
+display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.signContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.signContainer div.inputBox {
+    width: 48%; 
+}
+
+.imgStyle{
+   
+    float: left;
+    margin: 5px;
+    bottom: 50%;
+     width:70px;
+     
+}
+
+.signWrapper h2{
+    font-size: 19px;
+text-align: center;
+}
+.signWrapper .inputBox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 35px 0 ;
+}
+.inputBox label {
+    display: flex;
+    flex-direction: column;
+    align-items:left;
+    padding: 0;
+    color: grey;
+    font-size: medium;
+}
+.inputBox input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 12px;
+    padding: 20px 45px 20px 20px;
+    border: 2px solid black;
+    font-size: 16px;
+ 
+
+}
+#email {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 12px;
+    padding: 20px 45px 20px 20px;
+    border: 2px solid black;
+    font-size: 16px;
+}
+
+.signWrapper .signSubmit{
+    width: 100%;
+    height: 45px;
+    background: #EEC04B;
+    opacity: 0.2;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #1A7893;
+    font-weight: 700;
+   margin-bottom: 7%;
+}
+.signWrapper .signSubmit:hover{
+    background:#EEC04B;
+    opacity: 1;
+}
+
+.faceBook, .gooGle{
+    position:relative;
+    color: blue;
+    right: 5px;
+    top: 5%;
+   
+}
+
+.signFab, .signFog {
+    width: 100%;
+    height: 45px;
+    background: white;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 5%;
+}
+.signWrapper .signLink{
+    font-size: medium;
+    text-align: center;
+    margin: 20px 0 15px ;
+}
+
+.signLink p a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signLink p a:hover {
+    text-decoration: underline;
+}
+
+.signLine{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   position: relative;
+    
+}
+.signFull{
+    width: 100%;
+    position: absolute;
+    color: black;
+}
+.signText{
+    background: white;
+    z-index: 2;
+    padding: 5px;
+}
+.closeIcon{
+    position: relative;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: black
+}
