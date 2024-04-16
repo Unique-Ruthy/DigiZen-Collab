@@ -10,7 +10,7 @@ import DigitalLiteracy from "../../assets/Digital Literacy.png";
 const Category = () => {
   return (
     <div className={styles.categoryWrapper}>
-      <div className={styles.categoryWrap}>
+      <div className={styles.categoryImageWrap}>
         <img
           src={youngLady}
           alt="a youngLady"
@@ -18,7 +18,13 @@ const Category = () => {
         />
       </div>
 
-      <h1>Categories</h1>
+      <div className={styles.categoryHeader}>
+        <h1>Category</h1>
+        <div className={styles.categoryText}></div>
+        <div className={styles.categoryText1}></div>
+        <div className={styles.categoryText2}></div>
+        <div className={styles.categoryText3}></div>
+      </div>
 
       <div>
         <ul className={styles.category}>

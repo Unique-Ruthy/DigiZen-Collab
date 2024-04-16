@@ -23,7 +23,9 @@
 
 .serviceTextPrimary {
   position: absolute;
-  top: 20px;
+  top: 40px;
+  right: 100%;
+
   transform: rotate(45deg);
   width: 7px;
   height: 50px;
@@ -33,7 +35,7 @@
 .serviceTextPrimary1 {
   display: flex;
   position: absolute;
-  top: 20px;
+  top: 40px;
   left: 100%;
   transform: rotate(-45deg);
   width: 7px;
@@ -44,9 +46,9 @@
 .serviceTextPrimary2 {
   display: flex;
   position: absolute;
-  top: 0;
-  bottom: 50%;
-  transform: rotate(120deg);
+  bottom: 55px;
+  left: 100%;
+  transform: rotate(230deg);
   width: 7px;
   height: 50px;
   background-color: #006986;
@@ -55,8 +57,9 @@
 .serviceTextPrimary3 {
   display: flex;
   position: absolute;
-  top: 90px;
-  transform: rotate(45deg);
+  bottom: 55px;
+  right: 100%;
+  transform: rotate(-230deg);
   width: 7px;
   height: 50px;
   background-color: #006986;
@@ -70,13 +73,19 @@
   position: relative;
 }
 
+.cardContentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .lines {
   margin: 40px 0;
 }
 
 .firstCard {
   position: absolute;
-  bottom: 59%;
+  bottom: 52%;
   width: 23%;
 }
 
@@ -84,7 +93,7 @@
   position: absolute;
   bottom: 52%;
   width: 25%;
-  left: 3px;
+  left: 40px;
 }
 
 .thirdCard {
@@ -97,7 +106,7 @@
 .serviceText {
   margin-top: 21em;
   text-align: center;
-  width: 30px;
+  width: 350px;
 }
 
 .serviceText h4 {

@@ -1,27 +1,56 @@
 import "./App.css";
-import LandingPage from "./Pages/landingPage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LoginForm from "./Pages/loginPage/LoginForm";
-import SignUp from "./Pages/signupPage/SignUp";
-import NoPage from "./Pages/ErrorPage/NoPage";
+// import Auth from "./auth";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  // Route,
+  // Link,
+} from "react-router-dom";
+import LandingPage from "./Pages/LandingPage";
+import SignUpForm from "./Components/Authentication/signupPage/SignUp";
+import LoginForm from "./Components/Authentication/loginPage/LoginForm";
+import AboutUs from "./Pages/AboutUsPage";
+import Resources from "./Pages/Resources";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage />,
+  },
+  // {
+  //   element: <Auth />,
+  //   children: [
+  //     {
+  //       path: " /LandingPage",
+  //       element: <LandingPage />,
+  //     },
+  //   ],
+  // },
+  {
+    path: "/SignUpForm",
+    element: <SignUpForm />,
+  },
+
+  {
+    path: "/LoginForm",
+    element: <LoginForm />,
+  },
+
+  {
+    path: "/AboutUs",
+    element: <AboutUs />,
+  },
+
+  {
+    path: "/Resources",
+    element: <Resources />,
+  },
+]);
 const App = () => {
   return (
-    <>
-      
-      
-      <BrowserRouter>
-     <Routes>
-     <Route index element= {<SignUp />} />
-      <Route path="/signup" element={<SignUp />}  />
-      <Route path="/login" element={<LoginForm/>}  />
-      <Route path="/home" element={<LandingPage/>}  />
-      <Route path="*" element={<NoPage />} />
-     </Routes>
-     </BrowserRouter>
-   
-    </>
-    
+    <div className="App">
+      <RouterProvider router={router} />
+    </div>
   );
 };
 

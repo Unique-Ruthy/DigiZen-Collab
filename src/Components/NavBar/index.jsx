@@ -1,6 +1,7 @@
 import Button from "../Button";
 import styles from "./navbar.module.css";
 import Logo from "../Logo";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className={styles.navWrapper}>
@@ -15,9 +16,14 @@ const Navbar = () => {
             <li className={styles.navLists}>Blog</li>
             <li className={styles.navLists}>About</li>
           </ul>
-          <Button variant="tertiary">Sign Up</Button>
-          <Button variant="tertiary">Login</Button>
 
+          <Link to="/SignUpForm">
+            <Button variant="tertiary">Sign Up</Button>
+          </Link>
+
+          <Link to="/LoginForm">
+            <Button variant="tertiary">Login</Button>
+          </Link>
         </div>
       </div>
     </div>

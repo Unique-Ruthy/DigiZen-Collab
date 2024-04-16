@@ -76,3 +76,64 @@
 /* .btn[data-variant="tertiaryButton"] {
   padding: 5px 10px;
 }  */
+.btn[data-variant="authBtn"] {
+  padding: 6.55px;
+  text-align: center;
+  width: 527px;
+  height: 71px;
+  background-color: inherit;
+  color: #333333;
+  font-weight: 500;
+  gap: 65.51px;
+  line-height: 30px;
+  font-size: 20px;
+  border: 1.3px solid #515151;
+  box-shadow: 0 2.5px 0 0 #515151;
+  border-radius: 50px;
+  margin-bottom: 15px;
+}
+
+.btn[data-variant="authBtnSubmit"] {
+  padding: 6.55px;
+  text-align: center;
+  width: 527px;
+  height: 60px;
+  background-color: #eec04b;
+  color: #333333;
+  font-weight: 500;
+  gap: 65.51px;
+  line-height: 30px;
+  font-size: 20px;
+  border: 1.3px solid #515151;
+  box-shadow: 0 2.5px 0 0 #515151;
+  border-radius: 50px;
+  border:none;
+}
+
+.btn[data-variant="authBtnSubmit"]:hover {
+  background: #eec04b;
+  opacity: 0.8;
+}
+
+
+.btn[data-variant="authBtnLoginSubmit"] {
+  padding: 6.55px;
+  text-align: center;
+  width: 527px;
+  height: 60px;
+  background-color: #006987;
+  color: #fff;
+  font-weight: 500;
+  gap: 65.51px;
+  line-height: 30px;
+  font-size: 20px;
+  border: 1.3px solid #515151;
+  box-shadow: 0 2.5px 0 0 #0f3e4a;
+  border-radius: 50px;
+  border:none;
+}
+
+.btn[data-variant="authBtnLoginSubmit"]:hover {
+  opacity: 0.9;
+}
+
