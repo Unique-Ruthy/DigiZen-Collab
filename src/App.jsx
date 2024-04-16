@@ -1,5 +1,6 @@
 import "./App.css";
-<<<<<<< HEAD
+// import Contact from "./Pages/ContactPage/Contact";
+// import Category from "./../src/Components/category";
 // import Auth from "./auth";
 import {
   createBrowserRouter,
@@ -12,16 +13,7 @@ import SignUpForm from "./Components/Authentication/signupPage/SignUp";
 import LoginForm from "./Components/Authentication/loginPage/LoginForm";
 import AboutUs from "./Pages/AboutUsPage";
 import Resources from "./Pages/Resources";
-=======
-import LandingPage from "./Pages/landingPage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LoginForm from "./Pages/loginPage/LoginForm";
-import SignUp from "./Pages/signupPage/SignUp";
-import NoPage from "./Pages/ErrorPage/NoPage";
-import Contact from "./Pages/ContactPage/Contact"
-import Category from "./Components/category/index"
-import Literacy from "./Pages/DigitalLiteracy/Literacy"
->>>>>>> d2891ce7b07c38b465a968b3a07fbab5cdd14dd4
+import Literacy from "./Pages/DigitalLiteracy/Literacy";
 
 const router = createBrowserRouter([
   {
@@ -56,33 +48,18 @@ const router = createBrowserRouter([
     path: "/Resources",
     element: <Resources />,
   },
+
+  {
+    path: "/Literacy",
+    element: <Literacy />,
+  },
 ]);
+
 const App = () => {
   return (
-<<<<<<< HEAD
     <div className="App">
       <RouterProvider router={router} />
     </div>
-=======
-    <>
-      
-      
-      <BrowserRouter>
-     <Routes>
-     <Route index element= {<SignUp />} />
-      <Route path="/signup" element={<SignUp />}  />
-      <Route path="/login" element={<LoginForm/>}  />
-      <Route path="/home" element={<LandingPage/>}  />
-      <Route path="/contact" element={<Contact/>} />
-      <Route path="/category" element={<Category/>} />
-      <Route path="/literacy" element={<Literacy/>} />
-      <Route path="*" element={<NoPage />} />
-     </Routes>
-     </BrowserRouter>
-   
-    </>
-    
->>>>>>> d2891ce7b07c38b465a968b3a07fbab5cdd14dd4
   );
 };
 

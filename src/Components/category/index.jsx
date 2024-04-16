@@ -6,6 +6,7 @@ import instagram from "../../assets/instagram.png";
 import privacy from "../../assets/privacy-tip.png";
 import social from "../../assets/social-myspace.png";
 import DigitalLiteracy from "../../assets/Digital Literacy.png";
+import { Link } from "react";
 
 const Category = () => {
   return (
@@ -65,15 +66,17 @@ const Category = () => {
           </ul>
 
           <ul className={styles.categoryLists}>
-            <li className={styles.categoryList}>
-              <img
-                src={DigitalLiteracy}
-                alt="Digital Literacy"
-                className={styles.imgWrapper}
-              />
-            </li>
-            <p>Digital Literacy</p>
-            <HiArrowRight className={styles.categoryArrow} />
+            <Link to="/Literacy">
+              <li className={styles.categoryList}>
+                <img
+                  src={DigitalLiteracy}
+                  alt="Digital Literacy"
+                  className={styles.imgWrapper}
+                />
+              </li>
+              <p>Digital Literacy</p>
+              <HiArrowRight className={styles.categoryArrow} />
+            </Link>
           </ul>
 
           <ul className={styles.categoryLists}>
