@@ -7,13 +7,13 @@ import { FcGoogle } from "react-icons/fc";
 import { IoIosClose } from "react-icons/io";
 import Logo from "./../../../assets/digizenLogo.png";
 import { Link, useNavigate } from "react-router-dom";
-import Button from "./Button";
+import Button from "../../Button";
 import { Formik, Form } from "formik";
 import { useState } from "react";
-import UseContextParent from "./context/useContext";
+import UseContextParent from "../../context/useContext";
 import axios from "axios";
 // import { useContext } from "react";
-import { UserContext } from "./context/useContext";
+import { UserContext } from "../../context/useContext";
 
 // eslint-disable-next-line react/prop-types
 const LoginForm = () => {

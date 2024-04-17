@@ -1,4 +1,4 @@
-.literacyWrapper {
+.cyberWrapper {
   background: linear-gradient(rgba(0, 200, 197, 0.1), rgba(0, 200, 197, 0.1));
   font-family: Poppins;
 }
@@ -189,6 +189,10 @@
 
 .box h2 {
   margin-bottom: 12px;
+}
+
+.boxText {
+  margin-top: 60px;
 }
 
 .remains {

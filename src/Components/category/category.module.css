@@ -113,3 +113,7 @@
   height: 50px;
   background-color: #006986;
 }
+
+.cateLinks {
+  text-decoration: none;
+}

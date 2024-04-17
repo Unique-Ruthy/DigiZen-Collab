@@ -1,6 +1,5 @@
 import "./App.css";
 // import Contact from "./Pages/ContactPage/Contact";
-// import Category from "./../src/Components/category";
 // import Auth from "./auth";
 import {
   createBrowserRouter,
@@ -14,6 +13,10 @@ import LoginForm from "./Components/Authentication/loginPage/LoginForm";
 import AboutUs from "./Pages/AboutUsPage";
 import Resources from "./Pages/Resources";
 import Literacy from "./Pages/DigitalLiteracy/Literacy";
+import SocialMediaSafety from "./Pages/Social Media Safety";
+import DataPrivacy from "./Pages/Data Privacy &  Protection";
+import digiCitizenship from "./Pages/Digital Citizenship/index";
+import CyberSecurity from "./Pages/CyberSecurity";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +55,26 @@ const router = createBrowserRouter([
   {
     path: "/Literacy",
     element: <Literacy />,
+  },
+
+  {
+    path: "/SocialMediaSafety",
+    element: <SocialMediaSafety />,
+  },
+
+  {
+    path: "/DataPrivacy",
+    element: <DataPrivacy />,
+  },
+
+  {
+    path: "/ CyberSecurity",
+    element: <CyberSecurity />,
+  },
+
+  {
+    path: "/digiCitizenship",
+    element: <digiCitizenship />,
   },
 ]);
 

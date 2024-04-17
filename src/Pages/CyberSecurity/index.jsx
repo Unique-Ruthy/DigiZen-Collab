@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import "./Literacy.css";
+import "./cybersecurity.css";
 import { NavBar } from "../../Components/NavBar/index";
 import Footer from "../../Components/Footer/index";
 import BugImg from "./../../assets/bug.png";
@@ -11,17 +11,17 @@ import CarbonHybrid from "./../../assets/carbon_hybrid.png";
 import Carbon from "./../../assets/carbon.png";
 import Dashicons from "./../../assets/dashicons.png";
 import Computer from "./../../assets/computer.png";
-import Group from "./../../assets/Group.png";
-import Key from "./../../assets/key.png";
-import Employees from "./../../assets/Office_employees.png";
-import Planning from "./../../assets/Planning_work.png";
 import Security from "./../../assets/security.png";
+import Key from "./../../assets/key.png";
+import Backup from "./../../assets/Signing and stamping contract agreement.png";
+import Remote from "./../../assets/Remote work.png";
+import Man from "./../../assets/Man talking to support chatbot.png";
 import Button from "../../Components/Button";
 
-const Literacy = () => {
+const CyberSecurity = () => {
   return (
     <div>
-      <div className="literacyWrapper">
+      <div className="cyberWrapper">
         <div>
           <NavBar />
         </div>
@@ -33,7 +33,7 @@ const Literacy = () => {
               </div>
               <div className="middleSideImg">
                 <img id="vector" src={Vector2} alt="VectorImg" />
-                <h3 className="overlay-text">Digital Literacy</h3>
+                <h3 className="overlay-text">Cybersecurity</h3>
               </div>
               <div className="lastImg">
                 <img id="shape" src={Shape} className="shape" alt="Shape" />
@@ -50,21 +50,20 @@ const Literacy = () => {
               </div>
               <div className="texts">
                 <p>
-                  In today`s rapidly evolving digital world, digital literacy is
-                  indispensable. It encompasses the skills, knowledge, and
-                  behaviours required to effectively and responsibly engage with
-                  digital technologies. From basic internet navigation to
-                  critical thinking and cybersecurity, digital literacy empowers
-                  individuals to make informed decisions, communicate
-                  efficiently, and participate meaningfully in the digital
-                  society.
+                  Cybersecurity involves protecting digital systems, networks,
+                  and data from cyber threats, including hackers, malware, and
+                  unauthorized access. It encompasses a range of practices,
+                  technologies, and processes designed to prevent, detect, and
+                  respond to security breaches and vulnerabilities. Key aspects
+                  of cybersecurity include implementing robust security
+                  measures, such as firewalls and encryption, educating users
+                  about cybersecurity best practices.
                 </p>
                 <p className="p2">
-                  This overview explores the significance of digital literacy in
-                  fostering responsible digital citizenship and provides
-                  practical tips for enhancing digital literacy skills. Join us
-                  on the journey to become savvy and responsible digital
-                  citizens.
+                  This overview explores the significance of prioritizing data
+                  privacy and provides practical tips for enhancing digital
+                  literacy skills. Join us on the journey to become savvy and
+                  responsible digital citizens.
                 </p>
               </div>
               <div className="secondImg">
@@ -79,37 +78,33 @@ const Literacy = () => {
           </div>
           <div className="lowerside">
             <div className="boxes">
-              <h2>The ABC of Digital Literacy</h2>
+              <h2>The ABC of CYBERSECURITY</h2>
               <div className="threeBoxes">
                 <img id="key" src={Key} alt="KeyImg" />
                 <div className="box">
-                  <img src={Group} alt="GroupImg" />
-                  <h2 className="boxText">ACCESS</h2>
+                  <img src={Remote} alt="remoteImg" />
+                  <h2 className="boxText">ADAPTATION</h2>
                   <p>
-                    Ensuring equitable access to digital technologies and
-                    resources for all individuals, regardless of their
-                    socioeconomic background, geographic location, or physical
-                    abilities.
+                    Continuously adapt to evolving cybersecurity threats by
+                    staying informed about new risks and vulnerabilities.
                   </p>
                 </div>
                 <div className="box">
-                  <img src={Employees} alt="EmployeesImg" />
-                  <h2 className="boxText">BEHAVIOUR</h2>
+                  <img src={Backup} alt="backImg" />
+                  <h2 className="boxText">BACKUP</h2>
                   <p>
-                    Ensuring equitable access to digital technologies and
-                    resources for all individuals, regardless of their
-                    socioeconomic background, geographic location, or physical
-                    abilities.
+                    Implement regular data backup practices to ensure the
+                    protection and availability of important information.
                   </p>
                 </div>
                 <div className="box">
-                  <img src={Planning} alt="PlanningImg" />
-                  <h2 className="boxText">COMPETENCE</h2>
+                  <img src={Man} alt="manImg" />
+                  <h2 className="boxText">CAUTIOUSNESS</h2>
                   <p>
-                    Ensuring equitable access to digital technologies and
-                    resources for all individuals, regardless of their
-                    socioeconomic background, geographic location, or physical
-                    abilities.
+                    Exercise caution when interacting online and engaging with
+                    digital content. This involves being skeptical of
+                    unsolicited emails, messages, or requests for personal
+                    information..
                   </p>
                 </div>
               </div>
@@ -138,4 +133,4 @@ const Literacy = () => {
   );
 };
 
-export default Literacy;
+export default CyberSecurity;

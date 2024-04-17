@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import "./Literacy.css";
+import "./digitalCitizenship.css";
 import { NavBar } from "../../Components/NavBar/index";
 import Footer from "../../Components/Footer/index";
 import BugImg from "./../../assets/bug.png";
@@ -11,17 +11,17 @@ import CarbonHybrid from "./../../assets/carbon_hybrid.png";
 import Carbon from "./../../assets/carbon.png";
 import Dashicons from "./../../assets/dashicons.png";
 import Computer from "./../../assets/computer.png";
-import Group from "./../../assets/Group.png";
 import Key from "./../../assets/key.png";
-import Employees from "./../../assets/Office_employees.png";
-import Planning from "./../../assets/Planning_work.png";
+import awareness from "./../../assets/happy woman holding diploma at graduation.png";
+import Benefit from "./../../assets/Teamwork of colleagues in the office.png";
+import communication from "./../../assets/Woman in marketing and advertising.png";
 import Security from "./../../assets/security.png";
 import Button from "../../Components/Button";
 
-const Literacy = () => {
+const digiCitizenship = () => {
   return (
     <div>
-      <div className="literacyWrapper">
+      <div className="digitalCitizenshipWrapper">
         <div>
           <NavBar />
         </div>
@@ -33,7 +33,7 @@ const Literacy = () => {
               </div>
               <div className="middleSideImg">
                 <img id="vector" src={Vector2} alt="VectorImg" />
-                <h3 className="overlay-text">Digital Literacy</h3>
+                <h3 className="overlay-text">Digital Citizenship</h3>
               </div>
               <div className="lastImg">
                 <img id="shape" src={Shape} className="shape" alt="Shape" />
@@ -50,21 +50,20 @@ const Literacy = () => {
               </div>
               <div className="texts">
                 <p>
-                  In today`s rapidly evolving digital world, digital literacy is
-                  indispensable. It encompasses the skills, knowledge, and
-                  behaviours required to effectively and responsibly engage with
-                  digital technologies. From basic internet navigation to
-                  critical thinking and cybersecurity, digital literacy empowers
-                  individuals to make informed decisions, communicate
-                  efficiently, and participate meaningfully in the digital
-                  society.
+                  Digital citizenship refers to the responsible and ethical use
+                  of technology and digital platforms, encompassing a range of
+                  behaviours, skills, and attitudes that promote positive
+                  interactions and engagement in online spaces. It involves
+                  understanding one`s rights and responsibilities as a digital
+                  user, practising respectful and ethical behaviour online, and
+                  participating actively in digital communities. Digital
+                  citizenship encompasses various aspects, including:.
                 </p>
                 <p className="p2">
-                  This overview explores the significance of digital literacy in
-                  fostering responsible digital citizenship and provides
-                  practical tips for enhancing digital literacy skills. Join us
-                  on the journey to become savvy and responsible digital
-                  citizens.
+                  This overview explores the significance of fostering
+                  responsible digital citizenship and provides practical tips
+                  for enhancing digital literacy skills. Join us on the journey
+                  to become savvy and responsible digital citizens.
                 </p>
               </div>
               <div className="secondImg">
@@ -79,37 +78,31 @@ const Literacy = () => {
           </div>
           <div className="lowerside">
             <div className="boxes">
-              <h2>The ABC of Digital Literacy</h2>
+              <h2>The ABC OF DIGITAL CITIZENSHIP</h2>
               <div className="threeBoxes">
                 <img id="key" src={Key} alt="KeyImg" />
                 <div className="box">
-                  <img src={Group} alt="GroupImg" />
-                  <h2 className="boxText">ACCESS</h2>
+                  <img src={awareness} alt="awarenessImg" />
+                  <h2 className="boxText">AWARENESS</h2>
                   <p>
-                    Ensuring equitable access to digital technologies and
-                    resources for all individuals, regardless of their
-                    socioeconomic background, geographic location, or physical
-                    abilities.
+                    Understand the rights, responsibilities, and opportunities
+                    of being a digital citizen.
                   </p>
                 </div>
                 <div className="box">
-                  <img src={Employees} alt="EmployeesImg" />
-                  <h2 className="boxText">BEHAVIOUR</h2>
+                  <img src={Benefit} alt="benefitImg" />
+                  <h2 className="boxText">BENEFIT</h2>
                   <p>
-                    Ensuring equitable access to digital technologies and
-                    resources for all individuals, regardless of their
-                    socioeconomic background, geographic location, or physical
-                    abilities.
+                    Seek to maximize the positive impact of digital technology
+                    on individuals, communities, and society as a whole.
                   </p>
                 </div>
                 <div className="box">
-                  <img src={Planning} alt="PlanningImg" />
-                  <h2 className="boxText">COMPETENCE</h2>
+                  <img src={communication} alt="communicationImg" />
+                  <h2 className="boxText">COMMUNICATION</h2>
                   <p>
-                    Ensuring equitable access to digital technologies and
-                    resources for all individuals, regardless of their
-                    socioeconomic background, geographic location, or physical
-                    abilities.
+                    Engage in meaningful and constructive interactions while
+                    being mindful of others` feelings and perspectives.
                   </p>
                 </div>
               </div>
@@ -138,4 +131,4 @@ const Literacy = () => {
   );
 };
 
-export default Literacy;
+export default digiCitizenship;

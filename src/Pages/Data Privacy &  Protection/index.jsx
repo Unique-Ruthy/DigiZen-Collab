@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import "./Literacy.css";
+import "./dataSecurity.css";
 import { NavBar } from "../../Components/NavBar/index";
 import Footer from "../../Components/Footer/index";
 import BugImg from "./../../assets/bug.png";
@@ -11,17 +11,17 @@ import CarbonHybrid from "./../../assets/carbon_hybrid.png";
 import Carbon from "./../../assets/carbon.png";
 import Dashicons from "./../../assets/dashicons.png";
 import Computer from "./../../assets/computer.png";
-import Group from "./../../assets/Group.png";
 import Key from "./../../assets/key.png";
-import Employees from "./../../assets/Office_employees.png";
-import Planning from "./../../assets/Planning_work.png";
+import Control from "./../../assets/Woman working with analytics interface.png";
+import Awareness from "./../../assets/Finding a way, hiker looking at map.png";
+import Behaviour from "./../../assets/Hiring a new employee or partnership.png";
 import Security from "./../../assets/security.png";
 import Button from "../../Components/Button";
 
-const Literacy = () => {
+const DataPrivacy = () => {
   return (
     <div>
-      <div className="literacyWrapper">
+      <div className="dataPrivacyWrapper">
         <div>
           <NavBar />
         </div>
@@ -33,7 +33,7 @@ const Literacy = () => {
               </div>
               <div className="middleSideImg">
                 <img id="vector" src={Vector2} alt="VectorImg" />
-                <h3 className="overlay-text">Digital Literacy</h3>
+                <h3 className="overlay-text">Data Privacy and Protection</h3>
               </div>
               <div className="lastImg">
                 <img id="shape" src={Shape} className="shape" alt="Shape" />
@@ -50,14 +50,13 @@ const Literacy = () => {
               </div>
               <div className="texts">
                 <p>
-                  In today`s rapidly evolving digital world, digital literacy is
-                  indispensable. It encompasses the skills, knowledge, and
-                  behaviours required to effectively and responsibly engage with
-                  digital technologies. From basic internet navigation to
-                  critical thinking and cybersecurity, digital literacy empowers
-                  individuals to make informed decisions, communicate
-                  efficiently, and participate meaningfully in the digital
-                  society.
+                  Data privacy and protection are fundamental principles that
+                  involve safeguarding individuals` personal information from
+                  unauthorized access, use, or disclosure in digital
+                  environments. In today`s interconnected world, where vast
+                  amounts of data are generated, collected, and processed,
+                  maintaining privacy is essential for preserving individuals`
+                  autonomy, dignity, and trust.
                 </p>
                 <p className="p2">
                   This overview explores the significance of digital literacy in
@@ -79,37 +78,31 @@ const Literacy = () => {
           </div>
           <div className="lowerside">
             <div className="boxes">
-              <h2>The ABC of Digital Literacy</h2>
+              <h2>The ABC of DATA PRIVACY AND PROTECTION</h2>
               <div className="threeBoxes">
                 <img id="key" src={Key} alt="KeyImg" />
                 <div className="box">
-                  <img src={Group} alt="GroupImg" />
-                  <h2 className="boxText">ACCESS</h2>
+                  <img src={Awareness} alt="awarenessImg" />
+                  <h2 className="boxText">AWARENESS</h2>
                   <p>
-                    Ensuring equitable access to digital technologies and
-                    resources for all individuals, regardless of their
-                    socioeconomic background, geographic location, or physical
-                    abilities.
+                    Understand the importance of safeguarding personal data and
+                    the risks of sharing it online.
                   </p>
                 </div>
                 <div className="box">
-                  <img src={Employees} alt="EmployeesImg" />
+                  <img src={Behaviour} alt="behaviourImg" />
                   <h2 className="boxText">BEHAVIOUR</h2>
                   <p>
-                    Ensuring equitable access to digital technologies and
-                    resources for all individuals, regardless of their
-                    socioeconomic background, geographic location, or physical
-                    abilities.
+                    Adopt privacy-conscious behaviours like using strong
+                    passwords and reviewing privacy settings.
                   </p>
                 </div>
                 <div className="box">
-                  <img src={Planning} alt="PlanningImg" />
-                  <h2 className="boxText">COMPETENCE</h2>
+                  <img src={Control} alt="controlImg" />
+                  <h2 className="boxText">CONTROL</h2>
                   <p>
-                    Ensuring equitable access to digital technologies and
-                    resources for all individuals, regardless of their
-                    socioeconomic background, geographic location, or physical
-                    abilities.
+                    Take charge of personal data by managing privacy settings
+                    and permissions on devices and accounts.
                   </p>
                 </div>
               </div>
@@ -138,4 +131,4 @@ const Literacy = () => {
   );
 };
 
-export default Literacy;
+export default DataPrivacy;
