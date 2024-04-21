@@ -6,7 +6,7 @@
 
 body{
     background: none;
-    background-color: rgb(175, 229, 250);
+    background-color: rgb(180, 231, 252);
     font-family: Poppins;
 }
 
@@ -18,7 +18,7 @@ body{
     align-items: center;
 }
 
-.leftSideImg {
+.leftSideImg{
     padding: 5px;
 }
 
