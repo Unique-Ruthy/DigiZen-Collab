@@ -17,6 +17,10 @@ import SocialMediaSafety from "./Pages/Social Media Safety";
 import DataPrivacy from "./Pages/Data Privacy &  Protection";
 import digiCitizenship from "./Pages/Digital Citizenship/index";
 import CyberSecurity from "./Pages/CyberSecurity";
+import ForgotPassword from "./Pages/forgotPage";
+import EditProfile from "./Pages/EditProfile";
+import BlogPage from "./Pages/BlogPage/blogPage";
+
 
 const router = createBrowserRouter([
   {
@@ -76,6 +80,22 @@ const router = createBrowserRouter([
     path: "/digiCitizenship",
     element: <digiCitizenship />,
   },
+
+  {
+  path: "/forgotPassword",
+  element: <ForgotPassword />,
+},
+
+{
+  path: "/editProfile",
+  element:<EditProfile />,
+},
+
+{
+  path:"/blogPage",
+  element: <BlogPage />,
+},
+
 ]);
 
 const App = () => {
