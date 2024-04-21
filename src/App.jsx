@@ -1,4 +1,8 @@
 import "./App.css";
+ digizen-sofy
+
+import Aboutus from "./Pages/AboutPage/Aboutus"
+import Resources from "./Pages/ResourcesPage/Resources";
 // import Contact from "./Pages/ContactPage/Contact";
 // import Auth from "./auth";
 import {
@@ -51,6 +55,10 @@ const router = createBrowserRouter([
     path: "/Resources",
     element: <Resources />,
   },
+  {
+    path: "/Aboutus",
+    element: <Aboutus />,
+  },
 
   {
     path: "/Literacy",
@@ -82,7 +90,8 @@ const App = () => {
   return (
     <div className="App">
       <RouterProvider router={router} />
-    </div>
+    </div> 
+master
   );
 };
 

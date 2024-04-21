@@ -1,6 +1,19 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: none;
+    background-color: rgb(180, 231, 252);
+    font-family: Poppins;
+
 .literacyWrapper {
   background: linear-gradient(rgba(0, 200, 197, 0.1), rgba(0, 200, 197, 0.1));
   font-family: Poppins;
+
 }
 
 /*Upper Side*/
@@ -11,6 +24,9 @@
   align-items: center;
 }
 
+.leftSideImg{
+    padding: 5px;
+ }
 .leftSideImg {
   padding: 5px;
 }
