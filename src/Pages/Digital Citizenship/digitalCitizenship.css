@@ -1,19 +1,6 @@
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background: none;
-    background-color: rgb(180, 231, 252);
-    font-family: Poppins;
-
-.literacyWrapper {
+.digitalCitizenshipWrapper {
   background: linear-gradient(rgba(0, 200, 197, 0.1), rgba(0, 200, 197, 0.1));
   font-family: Poppins;
-
 }
 
 /*Upper Side*/
@@ -24,9 +11,6 @@ body{
   align-items: center;
 }
 
-.leftSideImg{
-    padding: 5px;
- }
 .leftSideImg {
   padding: 5px;
 }
@@ -205,6 +189,10 @@ body{
 
 .box h2 {
   margin-bottom: 12px;
+}
+
+.boxText {
+  margin-top: 60px;
 }
 
 .remains {

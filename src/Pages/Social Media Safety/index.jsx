@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import "./Literacy.css";
+import "./socialMediaSafety.css";
 import { NavBar } from "../../Components/NavBar/index";
 import Footer from "../../Components/Footer/index";
 import BugImg from "./../../assets/bug.png";
@@ -11,17 +11,17 @@ import CarbonHybrid from "./../../assets/carbon_hybrid.png";
 import Carbon from "./../../assets/carbon.png";
 import Dashicons from "./../../assets/dashicons.png";
 import Computer from "./../../assets/computer.png";
-import Group from "./../../assets/Group.png";
 import Key from "./../../assets/key.png";
-import Employees from "./../../assets/Office_employees.png";
-import Planning from "./../../assets/Planning_work.png";
+import AdjustSetting from "./../../assets/Finding a way, hiker looking at map.png";
+import BlockAccounts from "./../../assets/Young woman with blonde hair sitting with laptop.png";
+import careful from "./../../assets/Young woman with tablet.png";
 import Security from "./../../assets/security.png";
 import Button from "../../Components/Button";
 
-const Literacy = () => {
+const SocialMediaSafety = () => {
   return (
     <div>
-      <div className="literacyWrapper">
+      <div className="socialMediaWrapper">
         <div>
           <NavBar />
         </div>
@@ -33,7 +33,7 @@ const Literacy = () => {
               </div>
               <div className="middleSideImg">
                 <img id="vector" src={Vector2} alt="VectorImg" />
-                <h3 className="overlay-text">Digital Literacy</h3>
+                <h3 className="overlay-text">Social Media Safety</h3>
               </div>
               <div className="lastImg">
                 <img id="shape" src={Shape} className="shape" alt="Shape" />
@@ -50,21 +50,20 @@ const Literacy = () => {
               </div>
               <div className="texts">
                 <p>
-                  In today`s rapidly evolving digital world, digital literacy is
-                  indispensable. It encompasses the skills, knowledge, and
-                  behaviours required to effectively and responsibly engage with
-                  digital technologies. From basic internet navigation to
-                  critical thinking and cybersecurity, digital literacy empowers
-                  individuals to make informed decisions, communicate
-                  efficiently, and participate meaningfully in the digital
-                  society.
+                  Social media safety involves adopting measures to protect
+                  personal information and privacy while engaging with social
+                  networking platforms. It encompasses actions such as
+                  configuring privacy settings to control who can access your
+                  profile and posts, using strong and unique passwords, being
+                  selective about accepting friend requests or followers, and
+                  exercising caution when sharing personal information or
+                  clicking on links.
                 </p>
                 <p className="p2">
-                  This overview explores the significance of digital literacy in
-                  fostering responsible digital citizenship and provides
-                  practical tips for enhancing digital literacy skills. Join us
-                  on the journey to become savvy and responsible digital
-                  citizens.
+                  This overview explores the significance of prioritizing data
+                  privacy and provides practical tips for enhancing digital
+                  literacy skills. Join us on the journey to become savvy and
+                  responsible digital citizens.
                 </p>
               </div>
               <div className="secondImg">
@@ -79,37 +78,34 @@ const Literacy = () => {
           </div>
           <div className="lowerside">
             <div className="boxes">
-              <h2>The ABC of Digital Literacy</h2>
+              <h2>The ABC OF SOCIAL MEDIA SAFETY</h2>
               <div className="threeBoxes">
                 <img id="key" src={Key} alt="KeyImg" />
                 <div className="box">
-                  <img src={Group} alt="GroupImg" />
-                  <h2 className="boxText">ACCESS</h2>
+                  <img src={AdjustSetting} alt="adjustmentImg" />
+                  <h2 className="boxText">ADJUST SETTINGS</h2>
                   <p>
-                    Ensuring equitable access to digital technologies and
-                    resources for all individuals, regardless of their
-                    socioeconomic background, geographic location, or physical
-                    abilities.
+                    Regularly review and adjust the privacy settings on your
+                    social media accounts to ensure they align with your
+                    preferences and comfort level.
                   </p>
                 </div>
                 <div className="box">
-                  <img src={Employees} alt="EmployeesImg" />
-                  <h2 className="boxText">BEHAVIOUR</h2>
+                  <img src={BlockAccounts} alt="blockImg" />
+                  <h2 className="boxText">BLOCK ACCOUNTS</h2>
                   <p>
-                    Ensuring equitable access to digital technologies and
-                    resources for all individuals, regardless of their
-                    socioeconomic background, geographic location, or physical
-                    abilities.
+                    Be proactive in blocking and reporting suspicious accounts
+                    or activity on social media.
                   </p>
                 </div>
                 <div className="box">
-                  <img src={Planning} alt="PlanningImg" />
-                  <h2 className="boxText">COMPETENCE</h2>
+                  <img src={careful} alt="carefilImg" />
+                  <h2 className="boxText">CAREFUL SHARING</h2>
                   <p>
-                    Ensuring equitable access to digital technologies and
-                    resources for all individuals, regardless of their
-                    socioeconomic background, geographic location, or physical
-                    abilities.
+                    Exercise caution when sharing personal information, photos,
+                    or updates on social media platforms. Consider the potential
+                    risks and consequences of sharing sensitive information
+                    publicly.
                   </p>
                 </div>
               </div>
@@ -138,4 +134,4 @@ const Literacy = () => {
   );
 };
 
-export default Literacy;
+export default SocialMediaSafety;

@@ -1,37 +1,97 @@
 import "./App.css";
-import LandingPage from "./Pages/landingPage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LoginForm from "./Pages/loginPage/LoginForm";
-import SignUp from "./Pages/signupPage/SignUp";
-import NoPage from "./Pages/ErrorPage/NoPage";
-import Contact from "./Pages/ContactPage/Contact"
-import Category from "./Components/category/index"
-import Literacy from "./Pages/DigitalLiteracy/Literacy";
+ digizen-sofy
+
 import Aboutus from "./Pages/AboutPage/Aboutus"
 import Resources from "./Pages/ResourcesPage/Resources";
+// import Contact from "./Pages/ContactPage/Contact";
+// import Auth from "./auth";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  // Route,
+  // Link,
+} from "react-router-dom";
+import LandingPage from "./Pages/LandingPage";
+import SignUpForm from "./Components/Authentication/signupPage/SignUp";
+import LoginForm from "./Components/Authentication/loginPage/LoginForm";
+import AboutUs from "./Pages/AboutUsPage";
+import Resources from "./Pages/Resources";
+import Literacy from "./Pages/DigitalLiteracy/Literacy";
+import SocialMediaSafety from "./Pages/Social Media Safety";
+import DataPrivacy from "./Pages/Data Privacy &  Protection";
+import digiCitizenship from "./Pages/Digital Citizenship/index";
+import CyberSecurity from "./Pages/CyberSecurity";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage />,
+  },
+  // {
+  //   element: <Auth />,
+  //   children: [
+  //     {
+  //       path: " /LandingPage",
+  //       element: <LandingPage />,
+  //     },
+  //   ],
+  // },
+  {
+    path: "/SignUpForm",
+    element: <SignUpForm />,
+  },
+
+  {
+    path: "/LoginForm",
+    element: <LoginForm />,
+  },
+
+  {
+    path: "/AboutUs",
+    element: <AboutUs />,
+  },
+
+  {
+    path: "/Resources",
+    element: <Resources />,
+  },
+  {
+    path: "/Aboutus",
+    element: <Aboutus />,
+  },
+
+  {
+    path: "/Literacy",
+    element: <Literacy />,
+  },
+
+  {
+    path: "/SocialMediaSafety",
+    element: <SocialMediaSafety />,
+  },
+
+  {
+    path: "/DataPrivacy",
+    element: <DataPrivacy />,
+  },
+
+  {
+    path: "/ CyberSecurity",
+    element: <CyberSecurity />,
+  },
+
+  {
+    path: "/digiCitizenship",
+    element: <digiCitizenship />,
+  },
+]);
 
 const App = () => {
   return (
-    <>
-      
-      
-      <BrowserRouter>
-     <Routes>
-     <Route index element= {<SignUp />} />
-      <Route path="/signup" element={<SignUp />}  />
-      <Route path="/login" element={<LoginForm/>}  />
-      <Route path="/home" element={<LandingPage/>}  />
-      <Route path="/contact" element={<Contact/>} />
-      <Route path="/aboutus" element={<Aboutus />} />
-      <Route path="/category" element={<Category/>} />
-      <Route path="/literacy" element={<Literacy/>} />
-      <Route path="/resources" element={<Resources/>} />
-      <Route path="*" element={<NoPage />} />
-     </Routes>
-     </BrowserRouter>
-   
-    </>
-    
+    <div className="App">
+      <RouterProvider router={router} />
+    </div> 
+master
   );
 };
 

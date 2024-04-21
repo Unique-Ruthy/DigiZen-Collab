@@ -18,52 +18,58 @@ const Service = () => {
 
       <div className={styles.cardWrapper} alt="serviceSession">
         <Card>
-          <img
-            src={youngWoman}
-            alt="Edu Resources"
-            className={styles.secondCard}
-          />
-          <div className={styles.serviceText}>
-            <h4>Interactive modules</h4>
-            <p>
-              Learn through interactive lessons, trivia, games and quizzes to
-              easily grasp the various areas of the digital world and maximize
-              your citizenship
-            </p>
+          <div className={styles.cardContentWrapper}>
+            <img
+              src={youngWoman}
+              alt="Edu Resources"
+              className={styles.secondCard}
+            />
+            <div className={styles.serviceText}>
+              <h4>Interactive modules</h4>
+              <p>
+                Learn through interactive lessons, trivia, games and quizzes to
+                easily grasp the various areas of the digital world and maximize
+                your citizenship
+              </p>
+            </div>
           </div>
         </Card>
 
         <Card>
-          <img
-            src={Youngman}
-            alt="Edu Resources"
-            className={styles.firstCard}
-          />
+          <div className={styles.cardContentWrapper}>
+            <img
+              src={Youngman}
+              alt="Edu Resources"
+              className={styles.firstCard}
+            />
 
-          <div className={styles.serviceText}>
-            <h4>Educational Resources</h4>
-            <p>
-              Access informative articles, guides, and videos covering a wide
-              range of digital citizenship topics from online safety and privacy
-              to media literacy and cyber bullying prevention
-            </p>
+            <div className={styles.serviceText}>
+              <h4>Educational Resources</h4>
+              <p>
+                Access informative articles, guides, and videos covering a wide
+                range of digital citizenship topics from online safety and
+                privacy to media literacy and cyber bullying prevention
+              </p>
+            </div>
           </div>
         </Card>
 
         <Card>
-          <img
-            src={EduResources}
-            alt="Edu Resources"
-            className={styles.thirdCard}
-          />
+          <div className={styles.cardContentWrapper}>
+            <img
+              src={EduResources}
+              alt="Edu Resources"
+              className={styles.thirdCard}
+            />
 
-          <div className={styles.serviceText}>
-            <h4>Community Support</h4>
-            <p>
-              Connect with like minded individuals in our online community
-              forums. Share experiences, seek advice, and collaborate on
-              initiatives to promote positive digital citizenship
-            </p>
+            <div className={styles.serviceText}>
+              <h4>Community Support</h4>
+              <p>
+                Connect with like minded individuals in our online community
+                forums. Share experiences, seek advice, and collaborate on
+                initiatives to promote positive digital citizenship
+              </p>
+            </div>
           </div>
         </Card>
       </div>
