@@ -7,10 +7,15 @@ import {
   // Link,
 } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
-import SignUpForm from "./Components/Authentication/signupPage/SignUp";
-import LoginForm from "./Components/Authentication/loginPage/LoginForm";
-import AboutUs from "./Pages/AboutUsPage";
-import Resources from "./Pages/Resources";
+import Login from "./Components/Authentication/loginPage/LoginForm";
+import Register from "./Components/Authentication/signupPage/SignUp";
+import Aboutus from "./Pages/AboutPage/Aboutus";
+import Resources from "./Pages/Resources/Resources";
+import DigitalCitizenship from "./Pages/Digital Citizenship";
+import Literacy from "./Pages/DigitalLiteracy/Literacy";
+import DataPrivacy from "./Pages/Data Privacy &  Protection";
+import CyberSecurity from "./Pages/CyberSecurity";
+import SocialMediaSafety from "./Pages/Social Media Safety";
 
 const router = createBrowserRouter([
   {
@@ -27,23 +32,48 @@ const router = createBrowserRouter([
   //   ],
   // },
   {
-    path: "/SignUpForm",
-    element: <SignUpForm />,
+    path: "/Register",
+    element: <Register />,
   },
 
   {
-    path: "/LoginForm",
-    element: <LoginForm />,
+    path: "/Login",
+    element: <Login />,
   },
 
   {
-    path: "/AboutUs",
-    element: <AboutUs />,
+    path: "/Aboutus",
+    element: <Aboutus />,
   },
 
   {
     path: "/Resources",
     element: <Resources />,
+  },
+
+  {
+    path: "/DigitalCitizenship",
+    element: <DigitalCitizenship />,
+  },
+
+  {
+    path: "/Literacy",
+    element: <Literacy />,
+  },
+
+  {
+    path: "/DataPrivacy",
+    element: <DataPrivacy />,
+  },
+
+  {
+    path: "/CyberSecurity",
+    element: <CyberSecurity />,
+  },
+
+  {
+    path: "/SocialMediaSafety",
+    element: <SocialMediaSafety />,
   },
 ]);
 const App = () => {

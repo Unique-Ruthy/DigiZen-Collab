@@ -1,152 +1,173 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
+import { useState, useRef, useEffect, useContext } from "react";
 import styles from "./LoginForm.module.css";
 import { IoEyeOffSharp } from "react-icons/io5";
-import { FaFacebook } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { IoIosClose } from "react-icons/io";
+// import { IoIosClose } from "react-icons/io";
 import Logo from "./../../../assets/digizenLogo.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "../../Button";
-import { Formik, Form } from "formik";
-import { useState } from "react";
-import UseContextParent from "../../context/useContext";
-import axios from "axios";
-// import { useContext } from "react";
-import { UserContext } from "../../context/useContext";
+// import Resources from "../../../Pages/Resources";
+import Resources from "../../../Pages/Resources/Resources";
+import AuthContext from "../../../context/AuthProvider";
+import axios from "../../../api/axios";
 
-// eslint-disable-next-line react/prop-types
-const LoginForm = () => {
-  // eslint-disable-next-line no-undef
-  const { data, setData } = useContext(UserContext);
-  const [user, setUser] = useState({});
-  const navigate = useNavigate();
+const LOGIN_URL = "/auth";
 
-  const onSubmitHandler = (inputValues) => {
-    axios
-      .post("https://convene-backend.onrender.com/users/login", {
-        name: inputValues.fullName,
-        email: inputValues.email,
-        password: inputValues.password,
-      })
-      .then(function (response) {
-        // setUser(response)
-        setUser(response.data.data);
-        navigate("/landingPage");
-        console.log(response, "response");
-      })
-      .catch(function (error) {
-        setUser(error.response);
-        console.log(error);
-      });
+const Login = () => {
+  const { setAuth } = useContext(AuthContext);
+  const userRef = useRef();
+  const errRef = useRef();
 
-    // console.log(user, "users")
-    console.log(user, "data from login");
+  const [email, setEmail] = useState("");
+  const [pwd, setPwd] = useState("");
+  const [errMsg, setErrMsg] = useState("");
+  const [success, setSuccess] = useState(false);
 
-    return (
-      <div className={styles.loginWrapper}>
-        <Formik
-          onSubmit={onSubmitHandler}
-          initialValues={{ email: "", password: "" }}
-        >
-          {({ values, handleChange }) => {
-            return (
-              <div className={styles.formWrapper}>
-                <Form className={styles.formWrap}>
-                  <Link to="/" className={styles.headerLink}>
-                    <div className={styles.imageSpace}>
-                      <img
-                        src={Logo}
-                        alt="Description of the image"
-                        className={styles.imageStyle}
-                      />
-                      <p>Digizen</p>
-                    </div>
-                  </Link>
-                  {/* <IoIosClose className={styles.closeIcon} /> */}
+  useEffect(() => {
+    userRef.current.focus();
+  }, []);
 
-                  <div className={styles.registerLink}>
-                    <h2 className={styles.loginHeader}>Log in</h2>
-                    <p>
-                      Don`t have an account?{" "}
-                      <Link to="/SignUpForm">Sign up</Link>
-                    </p>
-                  </div>
+  useEffect(() => {
+    setErrMsg("");
+  }, [email, pwd]);
 
-                  <Button
-                    variant="authBtn"
-                    className={styles.fab}
-                    type="submit"
-                  >
-                    <FaFacebook className={styles.faceBook} />
-                    Log in with Facebook
-                  </Button>
-                  <Button
-                    variant="authBtn"
-                    className={styles.fog}
-                    type="submit"
-                  >
-                    <FcGoogle className={styles.gooGle} />
-                    Log in with Google
-                  </Button>
+  const onSubmitHandler = async (e) => {
+    e.preventDefault();
 
-                  <div className={styles.orLine}>
-                    <hr className={styles.wfull} />
-                    <p className={styles.orText}>or</p>
-                  </div>
-
-                  <div className={styles.inputFieldWrapper}>
-                    <div className={styles.inputBox}>
-                      <label htmlFor="email">Email</label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter email"
-                        required
-                        value={inputValues.email}
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className={styles.inputBox}>
-                      <label htmlFor="password">Password</label>
-                      <input
-                        id="password"
-                        type="password"
-                        placeholder="Please enter password"
-                        required
-                        value={inputValues.password}
-                        onChange={handleChange}
-                      />
-                      <IoEyeOffSharp className={styles.icon} />
-                    </div>
-
-                    <div className={styles.rememberForgot}>
-                      <label htmlFor="">
-                        <input type="checkbox" />
-                        Remember me{" "}
-                      </label>
-                      {/* Link to the forgot password page  */}
-                      <Link to="#">Forgot your password?</Link>
-                    </div>
-
-                    <Button
-                      variant="authBtnLoginSubmit"
-                      className={styles.submit}
-                      type="submit"
-                    >
-                      Log In
-                    </Button>
-                  </div>
-                </Form>
-              </div>
-            );
-          }}
-          ;
-        </Formik>
-      </div>
-    );
+    try {
+      const response = await axios.post(
+        LOGIN_URL,
+        JSON.stringify({ email, pwd }),
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true,
+        }
+      );
+      console.log(JSON.stringify(response?.data));
+      // console.log(JSON.stringify(response))
+      const accessToken = response?.accessToken;
+      const roles = response?.data?.roles;
+      // console.log(email, pwd);
+      setAuth({ email, pwd, roles, accessToken });
+      setEmail("");
+      setPwd("");
+      setSuccess(true);
+    } catch (err) {
+      if (!err.response) {
+        setErrMsg("No Server Response");
+      } else if (err.response?.status === 400) {
+        setErrMsg("Missing Username or Password");
+      } else if (err.responsible?.status === 401) {
+        setErrMsg("Unauthorised User");
+      } else {
+        setErrMsg("Login Failed");
+      }
+      console.log(err);
+      errRef.current.focus();
+    }
   };
+
+  return (
+    <>
+      {success ? (
+        <section>
+          <Resources />
+          <h1>Success!</h1>
+        </section>
+      ) : (
+        <div className={styles.loginWrapper}>
+          <div className={styles.formWrapper}>
+            <form className={styles.formWrap} onSubmit={onSubmitHandler}>
+              <Link to="/" className={styles.headerLink}>
+                <div className={styles.imageSpace}>
+                  <img
+                    src={Logo}
+                    alt="Digizen Logo"
+                    className={styles.imageStyle}
+                  />
+                  <p>Digizen</p>
+                </div>
+              </Link>
+              <div className={styles.registerLink}>
+                <p
+                  ref={errRef}
+                  className={errMsg ? styles.errmsg : styles.offscreen}
+                  aria-live="assertive"
+                >
+                  {errMsg}
+                </p>
+                <h2 className={styles.loginHeader}>Log in</h2>
+                <p>
+                  Don`t have an account? <Link to="/Register">Sign up</Link>
+                </p>
+              </div>
+
+              <div className={styles.socialIco}>
+                <Button variant="authBtn" className={styles.fab} type="button">
+                  <FaFacebook className={styles.faceBook} />
+                  Log in with Facebook
+                </Button>
+                <Button variant="authBtn" className={styles.fog} type="button">
+                  <FcGoogle className={styles.gooGle} />
+                  Log in with Google
+                </Button>
+              </div>
+
+              <div className={styles.orLine}>
+                <hr className={styles.wfull} />
+                <p className={styles.orText}>or</p>
+              </div>
+
+              <div className={styles.inputFieldWrapper}>
+                <div className={styles.inputBox}>
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    ref={userRef}
+                    autoComplete="off"
+                    placeholder="Enter email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div className={styles.inputBox}>
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    required
+                    value={pwd}
+                    onChange={(e) => setPwd(e.target.value)}
+                  />
+                  <IoEyeOffSharp className={styles.icon} />
+                </div>
+
+                <div className={styles.rememberForgot}>
+                  <label htmlFor="remember">
+                    <input type="checkbox" id="remember" />
+                    Remember me{" "}
+                  </label>
+                  <Link to="#">Forgot your password?</Link>
+                </div>
+
+                <Button
+                  variant="authBtnLoginSubmit"
+                  className={styles.submit}
+                  type="submit"
+                >
+                  Log In
+                </Button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+    </>
+  );
 };
 
-export default LoginForm;
+export default Login;
