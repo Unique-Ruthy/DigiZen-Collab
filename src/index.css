@@ -7,7 +7,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: inherit;
@@ -21,6 +21,7 @@ body {
   overflow-x: hidden;
   max-width: 1440px;
   margin: 0 auto;
+  background-color: inherit;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -41,7 +42,7 @@ body {
 }
 
 .App-link {
-  color: #61dafb;
+  /* color: #61dafb; */
 }
 
 @keyframes App-logo-spin {

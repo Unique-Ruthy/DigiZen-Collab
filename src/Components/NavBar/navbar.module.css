@@ -1,5 +1,4 @@
 .navWrapper {
-  
   font-family: Poppins;
   width: 100%;
   /* background-color: #863476; */
@@ -19,10 +18,11 @@
 
 .navBar {
   display: flex;
-  width: 1100px;
   align-items: center;
+  justify-content: center;
+  width: 1030px;
   background-color: #07c9c6;
-  gap: 30px;
+  gap: 20px;
   padding: 13px 70px;
   border-radius: 5px;
   margin-right: 100px;
@@ -33,16 +33,15 @@
   display: flex;
   align-items: center;
   list-style-type: none;
-  gap: 30px;
+  gap: 20px;
   font-size: 24px;
   line-height: 36px;
   cursor: pointer;
 }
 
 .navLists {
-  width: 135px;
-  height: 44px;
-  padding: 1px 10px;
+  width: 150px;
+  padding: 3px 10px;
   border: 0.4px solid #863476;
   text-align: center;
   gap: 20px;
@@ -60,4 +59,40 @@
   position: absolute;
   top: -49px;
   left: 90px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+
+.profileWrapper {
+  width: 47.73px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 45px;
+  
+}
+
+.profileImg {
+  width: 46.11px;
+  height: 46.11px;
+  margin-bottom: 8px;
+}
+
+.userText {
+  text-align: center;
+  font-size: 7.52px;
+  line-height: 9px;
+  color: #42fffc;
+}
+
+.userText2 {
+  text-align: center;
+  font-size: 7.52px;
+  line-height: 9px;
+  color: #863476;
 }
