@@ -1,4 +1,6 @@
 import "./App.css";
+
+
 // import Contact from "./Pages/ContactPage/Contact";
 // import Auth from "./auth";
 import {
@@ -10,17 +12,17 @@ import {
 import LandingPage from "./Pages/LandingPage";
 import SignUpForm from "./Components/Authentication/signupPage/SignUp";
 import LoginForm from "./Components/Authentication/loginPage/LoginForm";
-import AboutUs from "./Pages/AboutUsPage";
-import Resources from "./Pages/Resources";
 import Literacy from "./Pages/DigitalLiteracy/Literacy";
 import SocialMediaSafety from "./Pages/Social Media Safety";
 import DataPrivacy from "./Pages/Data Privacy &  Protection";
-import digiCitizenship from "./Pages/Digital Citizenship/index";
+import DigiCitizenship from "./Pages/Digital Citizenship/index";
 import CyberSecurity from "./Pages/CyberSecurity";
 import ForgotPassword from "./Pages/forgotPage";
 import EditProfile from "./Pages/EditProfile";
 import BlogPage from "./Pages/BlogPage/blogPage";
 
+import Aboutus from "./Pages/AboutPage/Aboutus"
+import Resources from "./Pages/ResourcesPage/Resources";
 
 const router = createBrowserRouter([
   {
@@ -47,13 +49,12 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/AboutUs",
-    element: <AboutUs />,
-  },
-
-  {
     path: "/Resources",
     element: <Resources />,
+  },
+  {
+    path: "/Aboutus",
+    element: <Aboutus />,
   },
 
   {
@@ -78,7 +79,7 @@ const router = createBrowserRouter([
 
   {
     path: "/digiCitizenship",
-    element: <digiCitizenship />,
+    element: <DigiCitizenship />,
   },
 
   {
@@ -102,7 +103,7 @@ const App = () => {
   return (
     <div className="App">
       <RouterProvider router={router} />
-    </div>
+    </div> 
   );
 };
 
